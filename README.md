@@ -1,6 +1,6 @@
 # Root Cause Analysis (RCA) AI Agent and Data Pipeline Project
 
-This repository contains a production-grade, modular implementation of a Root Cause Analysis (RCA) AI Agent that works in tandem with PySpark Medallion pipelines. This codebase works as a standard Python package (`rca_agent`) that runs both **locally** and on a **Databricks cluster**.
+This repository contains a production-grade, modular implementation of a Root Cause Analysis (RCA) AI Agent that works in tandem with PySpark Medallion pipelines. This codebase works as a standard Python package (`rca_agent`) that runs both **locally** and on a **Databricks cluster**. The AI agent is built using Langgraph framework.
 
 ---
 
