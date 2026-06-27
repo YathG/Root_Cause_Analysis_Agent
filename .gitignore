@@ -1,0 +1,29 @@
+# Local run data & Spark runtime artifacts
+data/
+spark-warehouse/
+metastore_db/
+derby.log
+*.json
+
+# Environment variables & secrets
+.env
+.env.local
+
+# Python caches & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# IDEs and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

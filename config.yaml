@@ -1,0 +1,48 @@
+# Global Configuration for RCA Agent Project
+
+# Current environment profile: 'local' or 'databricks'
+environment: local
+
+# Local execution settings
+local:
+  base_dir: "."
+  logs_dir: "./RCA_Logging_Artifacts"
+  raw_data_dir: "./RCA_Logging_Artifacts/raw"
+  # Paths to raw files
+  raw_paths:
+    brands: "./RCA_Logging_Artifacts/raw/brands/*.csv"
+    category: "./RCA_Logging_Artifacts/raw/category/*.csv"
+    products: "./RCA_Logging_Artifacts/raw/products/*.csv"
+    customers: "./RCA_Logging_Artifacts/raw/customers/*.csv"
+    date: "./RCA_Logging_Artifacts/raw/date/*.csv"
+    order_items: "./RCA_Logging_Artifacts/raw/order_items/landing/*.csv"
+  # Target local Delta/Parquet tables
+  tables:
+    brz_brands: "brz_brands"
+    brz_category: "brz_category"
+    brz_products: "brz_products"
+    brz_customers: "brz_customers"
+    brz_calendar: "brz_calendar"
+    slv_brands: "slv_brands"
+    slv_category: "slv_category"
+    slv_products: "slv_products"
+    slv_customers: "slv_customers"
+    slv_date: "slv_date"
+    gld_products: "gld_products"
+    gld_customers: "gld_customers"
+    gld_date: "gld_date"
+    # Fact tables
+    brz_order_items: "brz_order_items"
+    slv_fact_order_items: "slv_order_items"
+    gld_fact_order_items: "gld_fact_order_items"
+
+# Databricks execution settings
+databricks:
+  catalog: "ecommerce"
+  logs_base_path: "/Workspace/Users/gandhi.yatharth@gmail.com/RCA_Logging_Artifacts" # fallback, but dynamically resolved in code if possible
+  raw_volumes_path: "/Volumes/ecommerce/source_data/raw"
+
+# LLM Config for RCA Agent
+llm:
+  base_url: "https://openrouter.ai/api/v1"
+  model: "poolside/laguna-xs.2:free"

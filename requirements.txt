@@ -1,0 +1,11 @@
+# Core dependencies for RCA Agent and PySpark pipelines
+pyspark>=3.3.0
+langgraph>=0.0.1
+langchain-core>=0.1.0
+langchain-openai>=0.0.8
+openai>=1.0.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Development and testing
+pytest>=7.0.0
